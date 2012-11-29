@@ -13,8 +13,7 @@ if options.outfile == None:
 if not options.outfile.endswith((".xls", ".xlsx")):
         sys.exit("You have to name the outfile with .xls or .xlsx as extension!")
 
-urlopener = urllib.FancyURLopener()
-urlobject = urlopener.open(options.url)
+urlobject = urllib.urlopen(options.url)
 data = urlobject.read()
 links = re.findall("(http(s)?:\/\/[^\"\'\ \<\>]+)",data)
 
