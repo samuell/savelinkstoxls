@@ -6,7 +6,6 @@ parser.add_option("-o","--outfile",help="The filename where to save links (Excel
 
 (options,args) = parser.parse_args()
 
-import sys
 if options.url == None:
         sys.exit("You have to specify an URL! Use the -h flag to view options!")
 if options.outfile == None:
